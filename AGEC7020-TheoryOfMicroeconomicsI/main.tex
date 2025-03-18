@@ -1,0 +1,144 @@
+\documentclass[oneside]{book}
+
+\usepackage{amsmath, amsthm, amssymb, amsfonts}
+\usepackage{thmtools}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{framed}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{environ}
+\usepackage{tcolorbox}
+\tcbuselibrary{theorems,skins,breakable}
+
+%打中文需要以下packages
+\usepackage{xeCJK} 
+\setCJKmainfont[BoldFont={cwTeXHeiBold}, ItalicFont={FandolSong}]{cwTeXMing} %Overleaf 中文字型設定
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt %這兩行一定要加,中文才能自動換行
+
+
+\setstretch{1.2}
+\geometry{
+    textheight=9in,
+    textwidth=5.5in,
+    top=1in,
+    headheight=12pt,
+    headsep=25pt,
+    footskip=30pt
+}
+
+% Variables
+\def\notetitle{MATH 101}
+\def\noteauthor{
+    \textbf{Professor} \\ 
+    {\LaTeX} by Joe\\
+    University}
+\def\notedate{Semester}
+
+% The theorem system and user-defined commands
+\input{theorems.tex}
+\input{commands.tex}
+
+% ------------------------------------------------------------------------------
+
+\begin{document}
+\title{\textbf{
+    \LARGE{\notetitle} \vspace*{10\baselineskip}}
+    }
+\author{\noteauthor}
+\date{\notedate}
+
+\maketitle
+\newpage
+
+\tableofcontents
+\newpage
+
+% ------------------------------------------------------------------------------
+
+\chapter{Technology}
+
+\chapter{Profit Maximization}
+
+\chapter{Profit Function}
+
+\chapter{Cost Minimization}
+
+\chapter{Cost Function}
+
+\chapter{Duality}
+
+\include{ch7_utility_aximization.tex}
+
+\include{ch8_choices.tex}
+
+\include{ch9_demand.tex}
+
+\include{ch10.tex}
+
+\chapter{Examples} 
+
+\section{Theorem System}
+
+\defn{Definition Name}{
+    A defintion.
+}
+
+\thmr{Theorem Name}{mybigthm}{
+    A theorem.
+}
+
+\lem{Lemma Name}{
+    A lemma.
+}
+
+\fact{
+    A fact.
+}
+
+\cor{
+    A corollary.
+}
+
+\prop{
+    A proposition.
+}
+
+\clmp{}{
+    A claim.
+}{
+    A reference to Theorem~\ref{thm:mybigthm}
+}
+
+\pf{
+    Veniam velit incididunt deserunt est proident consectetur non velit ipsum voluptate nulla quis. Ea ullamco consequat non ad amet cupidatat cupidatat aliquip tempor sint ea nisi elit dolore dolore. 
+
+    Laboris labore magna dolore eiusmod ea ex et eiusmod laboris. Et aliquip cupidatat reprehenderit id officia pariatur. 
+}
+
+\ex{
+    Nostrud esse occaecat Lorem dolore laborum exercitation adipisicing eu sint sunt et. Excepteur voluptate consectetur qui ex amet esse sunt ut nostrud qui proident non. Ipsum nostrud ut elit dolor. Incididunt voluptate esse et est labore cillum proident duis.
+}
+
+\rmk{
+    Some remark.
+}
+
+\rmkb{
+    Some more remark.
+}
+
+\section{Pictures}
+
+\begin{figure}[H]
+    \center
+    \includegraphics[scale=0.1]{img/loo.jpg}
+    \caption{Waterloo, ON}
+\end{figure}
+
+\end{document}

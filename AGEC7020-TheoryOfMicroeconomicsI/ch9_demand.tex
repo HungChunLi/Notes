@@ -1,0 +1,367 @@
+\chapter{Demand}
+
+\section{Endowments in the Budget Constraint}
+
+\begin{itemize}
+    \item Endowment: $\mathbf{\omega} = (\omega_1, \dots, \omega_k)$
+    \item Current market price: $\mathbf{p}$
+\end{itemize}
+
+\[
+m = \mathbf{p \omega}
+\]
+
+The utility maximization problem becomes:
+\[
+\begin{aligned}
+\underset{\mathbf{x}}{\max} &\quad u(\mathbf{x}) \\
+\text{s.t.} &\quad \mathbf{p x} = \mathbf{p \omega}.
+\end{aligned}
+\]
+
+This can be solved using standard techniques to find the demand function $\mathbf{x(p, p \omega)}$:
+
+\[
+\begin{aligned}
+\frac{dx_i(\mathbf{p, p\omega})}{d p_j} &=
+\frac{\partial x_i(\mathbf{p, p\omega})}{\partial p_j}|_{\mathbf{p\omega}=\text{constant}} +
+\frac{\partial x_i(\mathbf{p, p\omega})}{\partial m} \omega_j \\
+&= \frac{\partial h_i(\mathbf{p}, u)}{\partial p_j} - x_j \frac{\partial x_i(\mathbf{p, p\omega})}{\partial m} + \frac{\partial x_i(\mathbf{p, p\omega})}{\partial m} \omega_j \\
+&= \underbrace{\frac{\partial h_i(\mathbf{p}, u)}{\partial p_j}}_{\text{Substitution Effect}} + \underbrace{(\omega_j - x_j) \frac{\partial x_i(\mathbf{p, p\omega})}{\partial m}}_{\text{Income Effect}}.
+\end{aligned}
+\]
+
+The income effect depends on the net demand for good $j$ rather than the gross demand.
+
+\block{Example: Labor Supply}{
+    \begin{enumerate}
+        \item Non-labor income: $m$
+        \item Consumer chooses two goods:
+            \begin{itemize}
+                \item Consumption: $c$, price: $p$ (good)
+                \item Working hours: $l$, wage: $w$ (bad)
+            \end{itemize}
+            Utility of consumption: $v(c, l)$. The utility maximization problem is:
+            \[
+            \begin{aligned}
+            \underset{c, l}{\max} &\quad v(c, l) \\
+            \text{s.t.} &\quad pc - wl = m.
+            \end{aligned}
+            \]
+        \item Maximum working hours: $\bar{L}$, Leisure: $L = \bar{L} - l$. 
+    
+        The utility function becomes $u(c, \bar{L} - l) = v(c, l)$, and the problem rewrites as:
+    
+        \[
+        \begin{aligned}
+        \underset{c, l}{\max} &\quad u(c, \bar{L} - l) \\
+        \text{s.t.} &\quad pc + w(\bar{L} - l) = w \bar{L} + m,
+        \end{aligned}
+        \]
+        or equivalently:
+        \[
+        \begin{aligned}
+        \underset{c, L}{\max} &\quad u(c, L) \\
+        \text{s.t.} &\quad pc + wL = w \bar{L} + m.
+        \end{aligned}
+        \]
+    
+        Using the Slutsky equation:
+        \[
+        \frac{dL(p, w, m)}{dw} = \underbrace{-\frac{\partial L(p, w, m)}{\partial w}}_{\text{Substitution Effect}} + \underbrace{\frac{\partial L(p, w, m)}{\partial m}[\bar{L} - L]}_{\text{Income Effect}}.
+        \]
+    
+        An increase in wage can lead to an increase or decrease in labor supply:
+        \begin{itemize}
+            \item Substitution effect: $\frac{\partial L(p, w, u)}{\partial w}$, higher wages make leisure more expensive (opportunity cost).
+            \item Income effect: $\frac{\partial L(p, w, m)}{\partial w}$, higher wages make consumers richer, increasing demand for leisure.
+        \end{itemize}
+    \end{enumerate}
+}
+
+
+\section{Homothetic Utility Functions}
+
+\block{Recap}{
+    \begin{itemize}
+        \item A function $f: R^n \to R$ is homogeneous of degree 1 if $f(\mathbf{x}) = t f(\mathbf{x})$ for all $t > 0$.
+        \item A function $f(x)$ is homothetic if $f(x) = g(h(x))$, where $g$ is strictly increasing and $h$ is homogeneous of degree 1.
+    \end{itemize}
+}
+
+Economists often assume utility functions are homogeneous or homothetic since both are defined up to monotonic transformations.
+Production function is homogeneous of degree 1 implies 
+\begin{itemize}
+    \item cost function $c(\mathbf{w}, y) = c(\mathbf{w})y$.
+\end{itemize}
+\noindent Utility function is homogeneous of degree 1 implies:
+\begin{itemize}
+    \item expenditure function $e(\mathbf{p}, u) = e(\mathbf{p})u$.
+    \item Indirect utility function: $v(\mathbf{p}, m) = v(\mathbf{p})m$.
+    \item Demand functions: $x_i(\mathbf{p}, m) = x_i(\mathbf{p})m$ (linear in income).
+\end{itemize}
+
+
+\section{Aggregating Across Goods}
+
+\begin{itemize}
+    \item $\mathbf{p}$: price vector of different kinds of meat.
+    \item $\mathbf{x}$: consumption vector of different kinds of meat.
+    \item $\mathbf{q}$: price vector of other goods.
+    \item $\mathbf{z}$: consumption vector of other goods.
+\end{itemize}
+
+\[
+\begin{aligned}
+\underset{\mathbf{x}, \mathbf{z}}{\max} &\quad u(\mathbf{x}, \mathbf{z}) \\
+\text{s.t.} &\quad \mathbf{px} + \mathbf{qz} = m.
+\end{aligned}
+\]
+
+Define price and quantity indices:
+\begin{itemize}
+    \item Price index: $P = f(\mathbf{p})$
+    \item Quantity index: $X = g(\mathbf{x})$
+\end{itemize}
+
+\[
+\begin{aligned}
+\underset{X, \mathbf{z}}{\max} &\quad U(X, \mathbf{z}) \\
+\text{s.t.} &\quad PX + \mathbf{qz} = m.
+\end{aligned}
+\]
+The demand function for the quantity index $X$ will be 
+\[
+    X(P, \textbf q, m) \equiv X(f(\textbf p), \textbf q, m) = g(\textbf x (\textbf p, \textbf q, m)
+\]
+\subsection*{Hicksian Separability}
+
+Hicksian separability assumes $\mathbf{p} = t \mathbf{p^0}$, leading to:
+\[
+P = t, \quad X = \mathbf{p^0} \mathbf{x}.
+\]
+\[
+\begin{aligned}
+    V(P, \mathbf{q}, m) = 
+    \underset{\mathbf{x}, \mathbf{z}}{\max} &\quad u(\mathbf{x}, \mathbf{z}) \\
+    \text{s.t.} &\quad P \mathbf{(p^0x)} + \mathbf{qz} = m.
+\end{aligned}
+\]
+
+By Roy's identity:
+\[
+X( P, \mathbf{q}, m) = 
+- \frac{\partial V(P, \mathbf{q}, m) / \partial P}{\partial V(P, \mathbf{q}, m) / \partial m} 
+= \mathbf{p^0} \mathbf{x}(\mathbf p, \mathbf{q}, m).
+\]
+
+\block{Example: The two-goods model}{
+    $\mathbf{x}$ is a group; $z$ is a single good.
+
+    \[
+    \begin{aligned}
+    \underset{\mathbf{x}, z}{\max} &\quad u(\mathbf{x}, z) \\
+    \text{s.t.} &\quad \mathbf{px} + qz = m.
+    \end{aligned}
+    \]
+
+    \[
+    \mathbf{p} = P\mathbf{p^0}.
+    \]
+    Since the demand function is homogeneous in degree zero
+    \[
+    \mathbf{z} = \mathbf{z}(P, \mathbf{q}, m) = 
+    \mathbf{z}\left(\frac{\mathbf{q}}{P}, \frac{m}{P}\right).
+    \]
+    This says that the demand for the $z$-good depends on the relative price of the $z$-good to all other goods and income, devided by the prices of "all other goods".
+
+    In practice, the price index for all other goods is usually taken to be some standard consumer price index. The demand for the $z$-good becomes a function of only two variables:
+    \begin{enumerate}
+        \item The price of the $z$-good relative to the CPI.
+        \item Income relative to the CPI.
+    \end{enumerate}
+}
+
+\subsection*{Functional Separability}
+
+Let us suppose that the underlying preference order has the property that 
+\[ 
+(\mathbf x, \mathbf z) \succ (\mathbf x^\prime, \mathbf z) \iff (\mathbf x, \mathbf z^\prime) \succ (\mathbf x^\prime, \mathbf z^\prime)
+\]
+for all consumption bundles \(\mathbf x, \mathbf x^\prime,\mathbf z, \mathbf z^\prime\). 
+This says that the preferences over the \(\mathbf x\)-goods are independent of the \(\mathbf z\)-goods.
+\highlight{(不管消費組合\(\mathbf z\)為何，\(\mathbf x \succ \mathbf x^\prime\)，永遠偏好\(\mathbf x \)消費組合。)}
+
+If 
+\begin{enumerate}
+    \item The independence property is satisfied
+    \item The preference are locally nonsatiated
+\end{enumerate}
+Then 
+\[
+u (\mathbf x, \mathbf z ) = U(v(\mathbf x ), \mathbf z),
+\] where 
+\begin{enumerate}
+    \item \( U(v, \mathbf z) \) is an increse function of \( v \).
+    \item \( v(\mathbf x) \) is subutility of \( \mathbf x\).
+    \item \( \mathbf z \) is the level of consumption of the \(\mathbf z\)-goods.
+\end{enumerate}
+We say that the utility function is \highlight{weekly separable}. (具弱可分性。)
+
+Let \(m_x = \mathbf{px}(\mathbf{p, q, }m) \) be the optimal expenditure on the \( \mathbf x \)-goods. 
+If the overall utility function is weakly separable, the optimal choice of the \( \mathbf x \)-goods can be found by solving the following subutility maximization problem:
+\begin{align*}
+    \underset{}{\max} &\quad v(\mathbf{x}) \\
+    \text{s.t.} &\quad \mathbf{px} = m_x.
+\end{align*}
+This means that the demand for the \( \mathbf x \)-goods is only a function of the prices of the \( \mathbf x \)-goods and the expenditure on the  \( \mathbf x \)-goods, \( m_x \).
+The prices of the other goods only relevant insofar as they determine the expenditure on the \( \mathbf x \)-goods. 
+
+The demand for the \( \mathbf x \)-goods, \( \mathbf x (\mathbf p, m_x) \) are conditional demand functions since they give demand for the \( \mathbf x \)-goods conditional on the level of expenditure on these goods.
+(例：牛肉的需求可以看作牛、羊、豬、雞價格與總消費的函數。)
+
+Let \( e (\mathbf p , v) \) be the expenditure function for the subutility maximization problem. 
+We can rewrite the overall maximization problem of the consumer as 
+\begin{align*}
+    \underset{v, \mathbf{z}}{\max} &\quad U(v, \mathbf{z}) \\
+    \text{s.t.} &\quad e (\mathbf p , v) + \mathbf{qz} = m.
+\end{align*}
+This is almost in the form we want:
+\begin{enumerate}
+    \item \( X = v(\mathbf x) \) is a suitable quantity index for the \( \mathbf x \)-goods.
+    \item \( P = e(\mathbf p, v) \) is a nonlinear function of \( \mathbf p \) and \( X = v \), which isn't what we want. 
+\end{enumerate}
+
+In order to have a budget constraint that is linear in quantity index, we need to assume that the subutility function has a special structure -- assume the subutility function is homothetic.
+Then we can write 
+\begin{itemize}
+    \item Expenditure Function: \( e(\mathbf p, v) = e(\mathbf p) v \)
+    \item Quantity Index: \( X = v(\mathbf x) \)
+    \item Price Index: \( P = e( \mathbf p ) \)
+    \item Utility Function: \( U(X, \mathbf z)\)
+\end{itemize}
+We ge the same \( X \) if we solve 
+\begin{align*}
+    \underset{X, \mathbf{z}}{\max} &\quad U(X, \mathbf{z}) \\
+    \text{s.t.} &\quad PX+ \mathbf{qz} = m
+\end{align*}
+as if we solve 
+\begin{align*}
+    \underset{\mathbf{x, z}}{\max} &\quad u(v(\mathbf{x}), \mathbf{z}) \\
+    \text{s.t.} &\quad \mathbf{px} + \mathbf{qz} = m
+\end{align*}
+and then aggregate using \( X = v(\mathbf x) \).
+
+In this formulation we can think of the consumption decision as taking place in two stages:
+\begin{enumerate}
+    \item The consumer considers how much of the composite commodity (e.g., meat) to consume as a function of a price index.
+    \item Then the consumer considers how much beef to consume given the prices of the various sorts of meat and the total expenditure on meat, which is the solution to the subutility maximization problem.
+\end{enumerate}
+
+
+\section{Aggregating Across Consumers}
+
+Continuity of individual demand functions is a \highlight{sufficient but not necessary condition} for continuity of aggregate demand funtion. 
+At any price greater than \( r_i \), consumer \( i \) demands zero of the good.
+If the price is less than or equal to \( r_i \), consumer \( i \) will demand one unit of the good. 
+The price \( r_i \) is called the \( i \)-th consumer's \highlight{reservation price}. 
+
+The aggregate demand for washing machines is given by 
+\[
+    X(p) = \text{number of consumers whose reservation price is at least $p$}
+\]
+If there are a lot of consumers with dispersed reservation price, it would make sense to think of this as a continuous function.
+The aggregate demand function will in general possess no interesting properties other than \highlight{homogeneity and continuity}.
+
+Suppose an individual consumers' indirect utility functions take the \textbf{Gorman form}:
+\[
+    v_i(\mathbf p, m_i) = a_i(\mathbf{p}) + b(\mathbf{p}) m_i
+\]
+where 
+\begin{itemize}
+    \item \( a_i(\mathbf{p}) \) can differ from consumer to consumer
+    \item \( b(\mathbf{p}) \) is assume to be identical for all consumers.
+\end{itemize}
+By Roy's identity, the demand for good \( j \) of consumer \( i \) will take the form:
+\begin{align*}
+    x_i^j(\mathbf{p}, m_i) &= -\frac{ \partial v_i / \partial p_j}{ \partial v_i / \partial m} \\
+    &= -\frac{
+        \frac{\partial a_i(\mathbf{p})}{ \partial p_j } + \frac{ \partial b }{ \partial p_j} m_i
+    }{b(\mathbf{p})} \\
+    &= -\frac{ \frac{\partial a_i(\mathbf{p})}{ \partial p_j } }{ b(\mathbf{p}) } - \frac{ \frac{b(\mathbf{p})}{ \partial p_j } }{ b(\mathbf{p}) } m_i \\
+    &= \alpha_i^j(\mathbf{p}) - \beta^j(\mathbf{p}) \cdot m_i \\
+    \implies \frac{ \partial x_i^j(\mathbf{p}, m_i) }{ \partial m_i } &= \beta^j(\mathbf{p})
+\end{align*}
+The marginal propensity to consume good \( j \), \( \frac{ \partial x_i^j(\mathbf{p}, m_i) }{ \partial m_i } \), is \highlight{independent of the level of income}
+\highlight{of any consumer and also constant across consumers since \( b(\mathbf{p}) \) is constant across consumers.} 
+
+The aggregate demand for good \( j \) will take the form 
+\[
+    X^j( \mathbf{p}, m_1, \cdots, m_n) = -\left[ \sum_{i=1}^{n} \frac{ \frac{\partial a_i(\mathbf{p})}{ \partial p_j } }{ b(\mathbf{p}) } + \frac{ \frac{b(\mathbf{p})}{ \partial p_j } }{ b(\mathbf{p}) } \sum_{i=1}^{n} m_i \right].
+\]
+This demand function can be generated by a representative consumer. 
+His (or her) representative indirect utility function is given by
+\begin{align*}
+    V(\mathbf p, M) &= \sum_{i=1}^{n} \left( a_i(\mathbf{p}) + b(\mathbf{p}) m_i \right)  \\
+    &= A(\mathbf p) + B(\mathbf p) M
+\end{align*}
+where \( M = \sum_{i=1}^{n} m_i \). It show that the \highlight{Gorman form is not only sufficient} for the representative consumer model to hold, \highlight{but it is also necessary}. (只要消費者的間接效用函數可寫成 Gorman form，可用代表性消費分析，方便我們分析。)
+
+\block{Example}{
+    Suppose that there are only two consumers. Then the aggregate demand for good \( j \) can be writen as 
+    \begin{align*}
+        X^j( \mathbf{p}, m_1, m_2) &= x_1^j(\mathbf p, m_1) + x_2^j(\mathbf p, m_2) \\
+        \implies \frac{\partial X^j( \mathbf{p}, M)}{ \partial M } &\equiv \frac{ \partial x_1^j(\mathbf p, m_1) }{ \partial m_1 } \equiv \frac{ \partial x_2^j(\mathbf p, m_2) }{ \partial m_2 }.
+    \end{align*}
+    Hence, marginal propensity to consume good \( j \) must be the same for all consumers.
+    \[
+        \frac{\partial^2 X^j( \mathbf{p}, M)}{ \partial M^2 } \equiv \frac{ \partial^2 x_1^j(\mathbf p, m_1) }{ \partial m_1^2 }  \equiv \frac{ \partial^2 x_2^j(\mathbf p, m_2) }{ \partial m_2^2 }  = 0
+    \]
+    Consumer 1's demand for good \( j \) and consumer 2's demand for good \( j \) are affine (仿射) in income.
+    Therefore, the demand function for good \( j \) take the form 
+    \[
+        x_i^j(\mathbf{p}, m_i) = \alpha_i^j(\mathbf{p}) - \beta^j(\mathbf{p}) \cdot m_i.
+    \]
+    If this is true for all goods, the indirect utility funciton for each consumers must have the Gorman form.
+    \highlight{(若對所有產品皆符合，則消費者之間接效用函數一定是 Gorman fo-}
+    \highlight{rm。)}
+}
+
+\noindent Two special cases of utility funcitons having a Gorman form:
+\begin{enumerate}
+    \item Homothetic utility function: \( V( \mathbf p, m) = V( \mathbf p) \cdot m\)
+    \item Quasi-linear utility function: \( V( \mathbf p, m) = V( \mathbf p) + m\)
+\end{enumerate}
+Many of the properties possessed by homothetic and/or quasi-linear utility are also possessed by Gorman form.
+
+
+\section{Inverse demand functions}
+
+Since demand functions are HD-0, we can fixed income at \(m = 1\).
+\begin{align*}
+    \underset{}{\max} &\quad u \\
+    \text{s.t.} &\quad \mathbf{px} = 1 \\
+    \implies & \mathcal{L} = u-\lambda(\mathbf{px} -  1) \\
+    \implies & \frac{\partial \mathcal{L}}{\partial x_i} = \frac{\partial u}{\partial x_i} - \lambda p_i = 0 \implies p_i = \frac{1}{\lambda} \frac{\partial u}{\partial x_i} \\
+    \implies & \mathbf{px} = \sum_{i=1}^{k} p_i x_i = \sum_{i-1}^{k} \left( \frac{1}{\lambda} \frac{\partial u}{\partial x_i} \right) x_i = \frac{1}{\lambda} \sum_{i=1}^{k} \left( \frac{\partial u}{\partial x_i} \right) x_i = 1 \\
+    \implies & \sum_{i=1}^{k} \left( \frac{\partial u}{\partial x_i} \right) x_i = \lambda \\
+    \implies & p_i(\mathbf x) = \frac{1}{\lambda} \frac{\partial u(\mathbf x)}{\partial x_i} = \frac{\frac{\partial u(\mathbf x)}{\partial x_i}}{\sum_{j=1}^{k} \left( \frac{\partial u(\mathbf x)}{\partial x_j} \right) x_j} 
+\end{align*}
+This is the indirect (inverse) demand function as function of \( \mathbf x \). 
+If the utility is quasi-concave so that these necessary conditions are indeed sufficient for maximization, then this will give us the inverse demand relationship.
+
+There is a dual version of the above formula for inverse demands. Since xxxx, to simplify without lose of the generosity, we can fixed income at \(m = 1\).
+\begin{align*}
+    u(\mathbf x) = \underset{}{\min} &\quad \mathbf v(\mathbf p) \\
+    \text{s.t.} &\quad \mathbf{px} = 1 \\
+    \implies & \mathcal{L} = v-\mu(\mathbf{px} -  1) \\
+    \implies & \frac{\partial \mathcal{L}}{\partial p_i} = \frac{\partial v}{\partial p_i} - \mu x_i = 0 \implies \mu x_i p_i = \frac{\partial v}{\partial p_i} p_i  \\
+    \implies & \mathbf{px} = \sum_{i=1}^{k} p_i x_i = \sum_{i-1}^{k} \left( \frac{1}{\mu} \frac{\partial v}{\partial p_i} \right) p_i = \frac{1}{\mu} \sum_{i=1}^{k} \left( \frac{\partial v}{\partial p_i} \right) p_i = 1 \\
+    \implies & \sum_{i=1}^{k} \left( \frac{\partial v}{\partial p_i} \right) p_i = \mu \\
+    \implies & x_i(\mathbf p) = \frac{1}{\mu} \frac{\partial v(\mathbf p)}{\partial p_i} = \frac{\frac{\partial v(\mathbf p)}{\partial p_i}}{\sum_{j=1}^{k} \left( \frac{\partial v(\mathbf p)}{\partial p_j} \right) p_j} 
+\end{align*}
+This is the direct demand funciton as function of \( \mathbf p \). The both functions have the same form.
+
+\section{Continuity of demand functions}
+
+Skip.

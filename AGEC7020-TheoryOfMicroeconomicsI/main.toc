@@ -1,0 +1,40 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\numberline {1}Technology}{3}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Profit Maximization}{4}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Profit Function}{5}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Cost Minimization}{6}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Cost Function}{7}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Duality}{8}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Utility Maximization}{9}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Consumer Preferences}{9}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Consumer Behavior}{11}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Indirect Utility}{14}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Some Important Identities}{15}{section.7.4}%
+\contentsline {section}{\numberline {7.5}The Money Metric Utility Function}{19}{section.7.5}%
+\contentsline {chapter}{\numberline {8}Choices}{20}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Comparative statics}{20}{section.8.1}%
+\contentsline {section}{\numberline {8.2}The Slusky equation}{22}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Properties of demand functions}{26}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Comparative statics using the first order condition}{26}{section.8.4}%
+\contentsline {section}{\numberline {8.5}The integrability problem}{27}{section.8.5}%
+\contentsline {section}{\numberline {8.6}Duality in consumption}{27}{section.8.6}%
+\contentsline {section}{\numberline {8.7}}{28}{section.8.7}%
+\contentsline {section}{\numberline {8.8}}{28}{section.8.8}%
+\contentsline {section}{\numberline {8.9}Comparative statics using revealed preference}{29}{section.8.9}%
+\contentsline {section}{\numberline {8.10}}{29}{section.8.10}%
+\contentsline {section}{\numberline {8.11}}{30}{section.8.11}%
+\contentsline {chapter}{\numberline {9}Demand}{31}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Endowments in the Budget Constraint}{31}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Homothetic Utility Functions}{32}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Aggregating Across Goods}{33}{section.9.3}%
+\contentsline {section}{\numberline {9.4}Aggregating Across Consumers}{36}{section.9.4}%
+\contentsline {section}{\numberline {9.5}Inverse demand functions}{38}{section.9.5}%
+\contentsline {section}{\numberline {9.6}Continuity of demand functions}{38}{section.9.6}%
+\contentsline {chapter}{\numberline {10}consumer's Surplus}{39}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Compensating and Equivalent Variations}{39}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Consumer Surplus}{40}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Quasilinear utility}{40}{section.10.3}%
+\contentsline {subsection}{\numberline {10.3.1}Two goods case}{41}{subsection.10.3.1}%
+\contentsline {chapter}{\numberline {11}Examples}{42}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Theorem System}{42}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Pictures}{43}{section.11.2}%

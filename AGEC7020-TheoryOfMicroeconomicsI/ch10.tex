@@ -1,0 +1,77 @@
+\chapter{consumer's Surplus}
+
+\section{Compensating and Equivalent Variations}
+
+\begin{itemize}
+\item $(\mathbf{p}^0, m^0)$: status quo
+\item $(\mathbf{p}^\prime, m^\prime)$: proposed change
+\end{itemize}
+Measure of the welfare change involved in moving from $(\mathbf{p}^0, m^0)$ to $(\mathbf{p}^\prime, m^\prime)$ is just the difference in indirect utility:
+\[
+    v(\mathbf{p}^\prime, m^\prime)-v(\mathbf{p}^0, m^0).
+\]
+We can adopt the indirect money metric utility function
+\[
+    \mu(\mathbf{q}; \mathbf{p}, m) = e(\mathbf{q}, v(\mathbf{p}, m))
+\]
+The above utility becomes
+\[
+    \mu(\mathbf{q}; \mathbf{p}^\prime, m^\prime)-
+    \mu(\mathbf{q}; \mathbf{p}^0, m^0)
+\]
+\block{Compensating and Equivalent Variations}{
+    \begin{align*}
+        EV &= \mu( \mathbf{p}^0; \mathbf{p}^\prime, m^\prime)
+        - \mu( \mathbf{p}^0; \mathbf{p}^0, m^0)
+        = \mu( \mathbf{p}^0; \mathbf{p}^\prime, m^\prime) - m^0
+    \end{align*}
+    \begin{itemize}
+        \item Equivalent variation: It uses the current prices as the base and asks what income change at the current prices would be equivalent to the proposed change in terms of its impact on utility.
+    \end{itemize}
+    \begin{align*}
+        CV &= \mu( \mathbf{p}^\prime; \mathbf{p}^\prime, m^\prime)
+        - \mu( \mathbf{p}^\prime; \mathbf{p}^0, m^0)
+        = m^\prime - \mu( \mathbf{p}^\prime; \mathbf{p}^0, m^0)
+    \end{align*}
+    \begin{itemize}
+        \item Compensating variation: It uses the new prices as the base and asks what income change would be necessary to compensate the consumer for the price change.
+    \end{itemize}
+}
+Both of these numbers are reasonable measures of the welfare effect of a price change. Their magnitudes will generally differ because the value of a dollar will depend on what th relevant price are. However, their sign will always be the same since they both measure the same utility differences, just using a different utility function.
+
+If you are trying to arrange for some compensation scheme at the new prices, then the compensating variation seems reasonable. However, if you are simply trying to get a reasonable measure of "willingness to pay," the equivalent variation is probably better. This is so for two reasons:
+\begin{enumerate}
+    \item The equivalent variation measures the income change at current prices, and it is much easier for decision makers to judge the value of a dollar at current prices than at some hypothetical prices.
+    \item Second, if we are comparing more than one proposed policy change, the compensating variation uses different base prices for each new policy while the equivalent variation keeps the base prices fixed at the status quo.
+\end{enumerate}
+Thus, the equivalent variation is more suitable for comparisons among a variety of projects.
+
+In summary, the compensating and equivalent variations are in fact observable if the demand functions are observable and if the demand functions satisfy the conditions implied by utility maximization.
+
+\section{Consumer Surplus}
+
+\block{Consumer Surplus}{
+    If $x(p)$ is the demand for some good as a function of its price, then the consumer's surplus associated with a price movement from $p^0$ to $p^\prime$ is
+    \[
+        CS=\int_{p^0}^{p^\prime} x(t) dt.
+    \]
+}
+It turns out that when the consumer's preferences can be represented by a quasilinear utility function, consumer's surplus is an exact measure of welfare change. More precisely, when utility is quasilinear, the compensating variation equals the equivalent variation, and both are equal to the consumer's surplus integral. For more general forms of the utility function, the compensating variation will be different from the equivalent variation and consumer's surplus will not be an exact measure of welfare change.
+
+\section{Quasilinear utility}
+Suppose that there exists a monotonic transformation of utility that has the form
+\[
+    U(x_0,x_1, \dots, x_k) = x_0 + U(x_1, \dots, x_k).
+\]
+Note that the utility function is linear in one of the goods, but (possibly) nonlinear in the other goods. For this reason we call this a quasilinear utility function.
+
+\subsection{Two goods case}
+\begin{align*}
+    \underset{x_0, x_1}{\max} & \ x_0 + u(x_1) \\
+    \text{s.t.} & \ x_0 + p_1x_1 = m \\
+    \implies \underset{x_1}{\max} & \ (m-p_1x_1) + u(x_1)
+\end{align*}
+Take the FOC, we get inverse demand function,
+\[
+    u^\prime(x_1) = p_1
+\]
