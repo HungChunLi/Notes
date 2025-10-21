@@ -10,5 +10,8 @@
 \contentsline {subsection}{\numberline {2.1.2}Mdframe Environment}{5}{subsection.2.1.2}%
 \contentsline {chapter}{\numberline {3}afawfeafw}{7}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Useful faefafawe}{7}{section.3.1}%
-\contentsline {chapter}{\numberline {A}Additional Proofs}{9}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Proof of \autoref {thm}}{9}{appendix.A.1}%
+\contentsline {chapter}{\numberline {4}Instrumental Variable}{8}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Instrumental Variable Approach}{8}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Two-Stage Least Squares (2SLS)}{9}{section.4.2}%
+\contentsline {chapter}{\numberline {A}Additional Proofs}{11}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Proof of \autoref {thm}}{11}{appendix.A.1}%

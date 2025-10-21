@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.10.21)  21 OCT 2025 15:41
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.10.21)  21 OCT 2025 18:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/ttyang/Documents/Notes/Econometric/master
-(c:/Users/ttyang/Documents/Notes/Econometric/master.tex
+**c:/Users/ttyang/Documents/Notes/Econometrics/master
+(c:/Users/ttyang/Documents/Notes/Econometrics/master.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-09-02>
 (c:/texlive/2025/texmf-dist/tex/latex/base/report.cls
@@ -1702,19 +1702,27 @@ Chapter 3.
 Package marginnote Info: Margin note 11.1 is on absolute page 11 on input line 3.
 Package marginnote Info: right page because not two side mode on input line 3.
 Package marginnote Info: xpos seems to be 72.2698pt on input line 3.
-Package marginnote Info: Margin note 11.2 is on absolute page 11 on input line 4.
-Package marginnote Info: right page because not two side mode on input line 4.
-Package marginnote Info: xpos seems to be 72.2698pt on input line 4.
-Package marginnote Info: Margin note 11.3 is on absolute page 11 on input line 5.
-Package marginnote Info: right page because not two side mode on input line 5.
-Package marginnote Info: xpos seems to be 72.2698pt on input line 5.
-)
+) (./Lectures/lec_4.tex
 
 [7
 
 ]
+Chapter 4.
+Package marginnote Info: Margin note 12.1 is on absolute page 12 on input line 4.
+Package marginnote Info: right page because not two side mode on input line 4.
+Package marginnote Info: xpos seems to be 72.2698pt on input line 4.
+Package marginnote Info: Margin note 12.2 is on absolute page 12 on input line 5.
+Package marginnote Info: right page because not two side mode on input line 5.
+Package marginnote Info: xpos seems to be 72.2698pt on input line 5.
+
 
 [8
+
+])
+
+[9]
+
+[10
 
 ] (./appendix.tex
 Appendix A.
@@ -1723,11 +1731,11 @@ Package mdframed Info: mdframed detected package amsthm
 (mdframed)              on input line 4.
 )
 
-[9
+[11
 
 ]
 
-[10
+[12
 
 ] (./master.aux)
  ***********
@@ -1738,25 +1746,19 @@ L3 programming layer <2025-09-02>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-Package rerunfilecheck Warning: File `master.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `master.out':
-(rerunfilecheck)             Before: 1B2DB58A8762CE6B362CFBC6346CFD0F;1377
-(rerunfilecheck)             After:  A085B19548A376C51132E5E07FD1E462;1352.
+Package rerunfilecheck Info: File `master.out' has not changed.
+(rerunfilecheck)             Checksum: CF907ADC1F177FA99DEB64D5E7415B9D;1935.
 Package logreq Info: Writing requests to 'master.run.xml'.
 \openout1 = `master.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 54025 strings out of 468389
- 1220123 string characters out of 5444296
+ 54044 strings out of 468389
+ 1220473 string characters out of 5444296
  2146860 words of memory out of 5000000
- 81628 multiletter control sequences out of 15000+600000
- 711710 words of font info for 122 fonts, out of 8000000 for 9000
+ 81642 multiletter control sequences out of 15000+600000
+ 715056 words of font info for 124 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 108i,22n,107p,1307b,4916s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,22n,107p,1308b,4916s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on master.pdf (12 pages).
+Output written on master.pdf (14 pages).

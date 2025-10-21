@@ -1,0 +1,65 @@
+\chapter{Instrumental Variable}
+
+\lecture{4}{13 Oct. 08:00}{First Lecture}
+\lecture{5}{13 Oct. 08:00}{First Lecture}
+
+\section{Instrumental Variable Approach}
+
+We now see some common environment you'll need to complete your note.
+
+\subsection*{Wald Estimator}
+The model \( y_i = \alpha + \beta x_i + u_i \) has one endogenous variable and no covariates.
+The instrument \( z_i \) is a binary variable consistting of 0 and 1.
+\begin{align*}
+    \mathrm{E}[y_i | z_i ] &= \mathrm{E}[ \alpha + \beta x_i + u_i | z_i ] \\
+    &= \mathrm{E}[ \alpha + \beta x_i + u_i | z_i ] \\
+    &= \alpha + \beta \mathrm{E}[ x_i | z_i ] + \underbrace{\mathrm{E}[ u_i | z_i ]}_{0} \\ 
+    \Rightarrow \mathrm{E}[y_i | z_i = 1] - \mathrm{E}[y_i | z_i = 0] &= \beta \left( \mathrm{E}[ x_i | z_i = 1] - \mathrm{E}[ x_i | z_i = 0] \right) \\
+    \Rightarrow \beta &= \frac{\mathrm{E}[y_i | z_i = 1] - \mathrm{E}[y_i | z_i = 0]}{\mathrm{E}[ x_i | z_i = 1] - \mathrm{E}[ x_i | z_i = 0]}.
+\end{align*}
+This is called the \textbf{Wald Estimator}.
+
+\subsection*{Consistency of IV Estimator}
+IV estimator is \text{biased} and \text{inefficient}, we use it because it is \text{consistent}.
+\begin{align*}
+    \textrm{plim} \ \hat{\beta}_{\text{IV}} &= \mathrm{plim} \ \frac{\mathrm{Cov}(z, y)}{\mathrm{Cov}(z, x)} \\
+    &= \frac{\mathrm{Cov}(z, \alpha + \beta x + u)}{\mathrm{Cov}(z, x)} \\
+    &= \frac{\mathrm{Cov}(z, \alpha)}{\mathrm{Cov}(z, x)} + \frac{\mathrm{Cov}(z, \beta x)}{\mathrm{Cov}(z, x)}+ \frac{\mathrm{Cov}(z, u)}{\mathrm{Cov}(z, x)} \\
+    &= \beta + \frac{\mathrm{Cov}(z, u)}{\mathrm{Cov}(z, x)} \\
+    &= \beta + \frac{\mathrm{Corr}(z, u) \sigma_z \sigma_u}{\mathrm{Corr}(z, x) \sigma_z \sigma_x} \\
+    &= \beta + \underbrace{\frac{\mathrm{Corr}(z, u)}{\mathrm{Corr}(z, x)} \times \frac{\sigma_u}{\sigma_x}}_{\text{Bias}} \\
+\end{align*}
+The equation shows that if \( \mathrm{Corr}(z, u) = 0 \) (exogenous) and \( \mathrm{Corr}(z, x) \neq 0 \) (relevance), then \( \mathrm{plim} \ \hat{\beta}_{\text{IV}} = \beta \), the IV estimator exists and is consistent.
+When \( \mathrm{Corr}(z, x) \) is small, the bias can be large, we call this the \textbf{weak instrument problem}. 
+
+\subsection*{Matrix Representation}
+Later
+
+
+\section{Two-Stage Least Squares (2SLS)}
+
+\begin{itemize}
+    \item \text{Just-identified}: the number of instruments equals the number of endogenous regressors.
+    \item \text{Over-identified}: the number of instruments exceeds the number of endogenous
+\end{itemize}
+
+\( x_1 \) is endogenous variables and \( z_1, z_2, z_3 \) is exogenous variables.
+As \( z_1, z_2, z_3 \) are all uncorrelated with \( u \), any linear combination of them is also uncorrelated with \( u \).
+\begin{align*}
+    y &= \alpha + \beta_1 \hat{x}_1 + \beta_2 z_1 + u \\
+    x_1 &= \pi_0 + \pi_1 z_1 + \pi_2 z_2 + \pi_3 z_3 + v
+\end{align*}
+
+\subsection*{Matrix Representation}
+\[
+    y = X \beta + u, 
+\] 
+where \( X = [x_1, \dots, x_k ] \) contains both endogenous and exogenous variables. 
+\( Z = [z_1, \dots, z_m] \) contains all exogenous variables with larger dimension than \( X \) (i.e., \( m \geq k \)), some columns of \( Z \) may be used as instruments for the endogenous variables in \( X \).
+
+
+The columns of \( X \) are projected onto the space spanned by the columns of \( Z \):
+\[
+    \hat{X} = Z (Z'Z)^{-1} Z' X = P_Z X,
+\]
+where \( P_Z \) is the projection matrix onto the column space of \( Z \).
