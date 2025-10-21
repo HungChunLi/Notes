@@ -1,0 +1,128 @@
+\chapter{Matching Under Transferable Utility: Theory}
+\lecture{4}{Mar. 11 2025}{Week 4}
+
+\section*{Section 4.1: Accounting for Unobservable Heterogeneity}
+
+\subsection*{1. Background and Problem}
+\begin{itemize}
+    \item \textbf{Core Problem}: Real-world matching (e.g., marriage) is influenced not only by observable traits like income or education but also by unobservable heterogeneity (e.g., personal preferences, attractiveness). Simple models based solely on income or education (see Subsection 3.4.2) predict strict assortative matching (highest income pairs with highest, second-highest with second-highest, and no singles), which does not align with reality:
+    \begin{itemize}
+        \item \textit{Model Prediction}: Strict positive assortative matching with no singles.
+        \item \textit{Reality}: Positive assortative matching exists (e.g., high-income often pairs with high-income), but it is not strict, and the probability of being single increases as income decreases.
+    \end{itemize}
+    \item \textbf{Goal}: Develop a more flexible model that accounts for unobservable differences to explain real-world matching patterns.
+\end{itemize}
+
+\subsection*{2. Model Setup: Introducing Random Shocks}
+\begin{itemize}
+    \item \textbf{Basic Model}:
+    \begin{itemize}
+        \item Individuals are categorized by types \( I \) and \( J \) (e.g., high or low income, denoted as \( K \) or \( L \)).
+        \item Pairwise surplus: 
+        \[
+        S(i, j) = z(I, J) + \varepsilon_{i,j},
+        \]
+        where \( z(I, J) \) is the deterministic component, and \( \varepsilon_{i,j} \) is a stochastic term capturing unobservable preferences.
+        \item Surplus for singles: 
+        \[
+        S(i, \emptyset) = z(I, \emptyset) + \varepsilon_{i\emptyset}, \quad S(\emptyset, j) = z(\emptyset, J) + \varepsilon_{\emptyset j}.
+        \]
+    \end{itemize}
+    \item \textbf{Separability Assumption}:
+    \begin{itemize}
+        \item The random term is separable: 
+        \[
+        \varepsilon_{i,j} = \alpha_I^i + \beta_J^j,
+        \]
+        where \( \alpha_I^i \) depends on \( i \)'s category \( I \) and individual characteristics, and \( \beta_J^j \) depends on \( j \)'s category \( J \).
+        \item This assumes the random term depends only on categories, not on the specific identity of the partner.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{3. Why the Separability Assumption?}
+\begin{itemize}
+    \item \textbf{Reality Consideration}: Matching in reality depends on unobservable traits (e.g., appearance, personality), which are modeled as random shocks \( \varepsilon_{i,j} \).
+    \item \textbf{Problem with Independence}: If \( \varepsilon_{i,j} \) is assumed independent, it leads to unrealistic predictions (Chiappori et al., 2015):
+    \begin{itemize}
+        \item With large populations, the maximum \( \varepsilon_{i,j} \) either converges to a fixed value (if bounded) or to infinity (if unbounded), overshadowing economic factors and predicting near-zero singlehood rates.
+    \end{itemize}
+    \item \textbf{Benefits of Separability}:
+    \begin{itemize}
+        \item Simplifies the model: \( \varepsilon_{i,j} = \alpha_I^i + \beta_J^j \) depends only on categories, reducing computational complexity.
+        \item More realistic: For example, women of a certain type may generally prefer men of a certain type (captured by \( \beta_J^j \)), independent of specific traits.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{4. Main Result (Proposition 1)}
+\begin{itemize}
+    \item \textbf{Conditions}: The surplus satisfies the separability assumption \( \varepsilon_{i,j} = \alpha_I^i + \beta_J^j \), with \( \alpha \) and \( \beta \) independently distributed.
+    \item \textbf{Result}:
+    \begin{itemize}
+        \item Payoff for woman \( i \): 
+        \[
+        u_i = U^{I,i} + \alpha_I^i, \quad \text{and for man } j: \quad v_j = V^{J,j} + \beta_J^j.
+        \]
+        \item \( U^{I,i} \) and \( V^{J,j} \) are deterministic components depending only on categories \( I \) and \( J \).
+        \item Woman \( i \) matches with a man of category \( J \) if:
+        \[
+        U^{I,i} + \alpha_I^i \geq V^{L,i} + \alpha_L^i \quad \text{for all } L.
+        \]
+        \item She remains single if:
+        \[
+        \alpha_I^i \geq U^{L,i} + \alpha_L^i.
+        \]
+    \end{itemize}
+    \item \textbf{Intuition}: Women choose partners based on their category (e.g., high or low income), not their specific identity. Their payoff depends on their preference \( \alpha_I^i \) and the category's value \( U^{I,i} \). If the singlehood payoff is higher, they stay single.
+\end{itemize}
+
+\subsection*{5. Comparative Statics (Proposition 3)}
+\begin{itemize}
+    \item \textbf{Conditions}: Compare two models with the separability assumption:
+    \begin{itemize}
+        \item Model 1: \( S(i, j) = z(I, J) + \alpha_I^i + \beta_J^j \),
+        \item Model 2: \( \tilde{S}(i, j) = \tilde{z}(I, J) + \tilde{\alpha}_I^i + \tilde{\beta}_J^j \),
+        \item Random terms have the same distribution; the difference lies in the deterministic parts \( z \) and \( \tilde{z} \).
+    \end{itemize}
+    \item \textbf{Result}:
+    \begin{itemize}
+        \item If \( z \) is more supermodular than \( \tilde{z} \), i.e.,
+        \[
+        z(K,K) + z(L,L) - z(K,L) - z(L,K) \geq \tilde{z}(K,K) + \tilde{z}(L,L) - \tilde{z}(K,L) - \tilde{z}(L,K),
+        \]
+        then Model 1 has more assortative matching than Model 2:
+        \[
+        \sigma_{KK} + \sigma_{LL} \geq \tilde{\sigma}_{KK} + \tilde{\sigma}_{LL}.
+        \]
+        \item If \( \tilde{z} \) is not supermodular, i.e.,
+        \[
+        \tilde{z}(K,K) + \tilde{z}(L,L) = \tilde{z}(K,L) + \tilde{z}(L,K),
+        \]
+        then Model 2 results in random matching.
+    \end{itemize}
+    \item \textbf{Intuition}: Stronger supermodularity (higher surplus for same-type pairs) leads to more assortative matching (e.g., high income with high income). If supermodularity vanishes, matching becomes random.
+\end{itemize}
+
+\subsection*{6. Real-World Implications and Limitations}
+\begin{itemize}
+    \item \textbf{Implications}:
+    \begin{itemize}
+        \item Explains why assortative matching in reality is not strict (due to random shocks) and why singlehood rates increase as income decreases (low-income individuals may prefer singlehood).
+        \item Supermodularity drives matching patterns: stronger supermodularity leads to more assortative matching; weaker supermodularity results in more random matching.
+    \end{itemize}
+    \item \textbf{Limitations}:
+    \begin{itemize}
+        \item The separability assumption is restrictive: In reality, preferences may depend on specific traits of the partner (e.g., appearance), not just their category.
+        \item Handling random shocks remains complex: Independence leads to unrealistic results, and specifying a covariance structure is hard to estimate.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Summary}
+\begin{itemize}
+    \item \textbf{Key Contribution}: Introduces the separability assumption to incorporate unobservable heterogeneity, explaining non-strict assortative matching and singlehood patterns in reality.
+    \item \textbf{Main Results}:
+    \begin{itemize}
+        \item Women choose partners based on categories, with payoffs determined by deterministic components and random preferences.
+        \item Supermodularity determines the matching pattern: stronger supermodularity leads to more assortative matching.
+    \end{itemize}
+    \item \textbf{Real-World Application}: Explains why high-income individuals often pair with high-income partners, but not always, and why low-income individuals are more likely to remain single.
+\end{itemize}
